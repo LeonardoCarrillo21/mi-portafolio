@@ -2,8 +2,9 @@
 
 ¡Bienvenido a mi portafolio! Este es un sitio web moderno y minimalista construido para mostrar mi trayectoria, proyectos destacados y habilidades técnicas como desarrollador.
 
-**🔗 Ver sitio en vivo:** [https://tu-portafolio.vercel.app](https://tu-portafolio.vercel.app)
+**🔗 Ver sitio en vivo:** [https://mi-portafolio-henna-mu.vercel.app/](https://mi-portafolio-henna-mu.vercel.app/)
 
+Imagen
 ![https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png](https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png)
 
 ---
