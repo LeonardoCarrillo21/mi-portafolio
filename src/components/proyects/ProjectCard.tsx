@@ -1,0 +1,53 @@
+// src/components/ProjectCard.tsx
+'use client';
+interface ProjectProps {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+}
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+
+export default function ProjectCard({ title, description, tags, link }: ProjectProps) {
+
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Evita errores de hidratación esperando a que el componente se monte
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+
+  return (
+    <div className={`group relative rounded-2xl border border-white/10 ${theme === "dark" ? "bg-white/5" : "bg-gray-100"} p-6 transition-all hover:bg-white/10 hover:border-blue-500/50`}>
+      <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-400 text-sm mb-4">
+        {description}
+      </p>
+      
+      <div className="flex flex-wrap gap-2 mb-6">
+        {tags.map((tag) => (
+          <span 
+            key={tag} 
+            className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/20"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <a 
+        href={link} 
+        target="_blank" 
+        className={`text-sm font-semibold inline-flex items-center gap-1 ${theme === "dark" ? "text-white " : "text-black "} hover:underline`}
+      >
+        Ver proyecto 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+    </div>
+  );
+}
