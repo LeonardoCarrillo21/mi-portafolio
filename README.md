@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Mi Portafolio Profesional
 
-## Getting Started
+¡Bienvenido a mi portafolio! Este es un sitio web moderno y minimalista construido para mostrar mi trayectoria, proyectos destacados y habilidades técnicas como desarrollador.
 
-First, run the development server:
+**🔗 Ver sitio en vivo:** [https://tu-portafolio.vercel.app](https://tu-portafolio.vercel.app)
+
+[https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png](https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png)
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+Este proyecto aprovecha las últimas características del ecosistema de React y Next.js:
+
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
+- **Estilos:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animaciones:** [Framer Motion](https://www.framer.com/motion/)
+- **Iconos:** [Lucide React](https://lucide.dev/)
+- **Envío de Correos:** [Resend](https://resend.com/)
+- **Despliegue:** [Vercel](https://vercel.com/)
+
+---
+
+## ✨ Características principales
+
+- **Dark Mode Nativo:** Implementado con `next-themes` y un switch de "ojo" personalizado.
+- **Diseño Responsivo:** Optimizado para móviles, tablets y escritorio.
+- **Animaciones On-Scroll:** Uso de Intersection Observer para revelar elementos suavemente.
+- **Server Actions:** Formulario de contacto funcional sin necesidad de un backend externo complejo.
+- **Optimización de SEO:** Configuración de Metadata para mejores resultados en buscadores y redes sociales.
+- **Rendimiento:** Puntuaciones altas en Lighthouse gracias a la optimización de imágenes de Next.js.
+
+---
+
+## 📦 Instalación y Configuración Local
+
+Si deseas clonar este proyecto y ejecutarlo en tu máquina:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/tu-usuario/mi-portafolio.git](https://github.com/tu-usuario/mi-portafolio.git)
+   cd mi-portafolio
+2. **Instalar dependencias:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+npm install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Configurar variables de entorno:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Crea un archivo .env.local en la raíz y añade tu llave de Resend:
+  Fragmento de código
+  RESEND_API_KEY=re_tu_llave_aqui
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ejecutar el servidor de desarrollo:
 
-## Learn More
+```bash
+  npm run dev
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Abre http://localhost:3000 en tu navegador.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📂 Estructura del Proyecto
+Plaintext
 
-## Deploy on Vercel
+├── public/          # Imágenes y archivos estáticos
+├── src/
+│   ├── app/         # Rutas y páginas (Next.js App Router)
+│   ├── components/  # Componentes reutilizables (Navbar, Card, etc.)
+│   ├── data/        # Archivos de configuración de proyectos y skills
+│   └── actions.ts   # Lógica del servidor (Envío de emails)
+└── tailwind.config/ # Configuración de estilos
+✉️ Contacto
+¿Tienes alguna pregunta o propuesta? ¡Escríbeme!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+LinkedIn: leonardo Carrillo
+[https://www.linkedin.com/in/leonardo-javier-carrillo-martinez-software-developer/](https://www.linkedin.com/in/leonardo-javier-carrillo-martinez-software-developer/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Email: carrillomartinezleonardojavier@gmail.com
+
+Desarrollado con ❤️ por [LeonardoCarrillo21]
