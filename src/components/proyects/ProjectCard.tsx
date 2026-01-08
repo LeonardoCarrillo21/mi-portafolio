@@ -9,10 +9,10 @@ interface ProjectProps {
 }
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function ProjectCard({ title, description, tags, link, image }: ProjectProps) {
-
+  console.log(image);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -28,13 +28,19 @@ export default function ProjectCard({ title, description, tags, link, image }: P
   return (
     <div className={`group relative rounded-2xl border border-white/10 ${theme === "dark" ? "bg-white/5" : "bg-gray-100"} p-6 transition-all hover:bg-white/10 hover:border-blue-500/50`}>
 
-      <Image 
+      {/* <Image 
         src={imgSrc} 
         alt={title} 
         width={300} 
         height={200} 
         className="w-full h-48 object-cover rounded-t-xl" 
+        onError={()=> setImgSrc(fallbackImage)}/> */}
+      <img 
+        src={imgSrc} 
+        alt={title} 
+        className="w-full h-48 object-cover rounded-t-xl" 
         onError={()=> setImgSrc(fallbackImage)}/>
+
       <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
         {title}
       </h3>

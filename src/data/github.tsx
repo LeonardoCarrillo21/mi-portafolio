@@ -1,14 +1,15 @@
 export async function getGithubRepos() {
-    const USUARIO = "LeonardoCarrillo21";
+  const USUARIO = "LeonardoCarrillo21";
   const BRANCH = "main"; // o "master", según uses
   const NOMBRE_IMAGEN = "screenshot.png"; // La convención que elijas
 
-
-
-    const response = await fetch(`https://api.github.com/users/${USUARIO}/repos?sort=updated`, {
+  const response = await fetch(
+    `https://api.github.com/users/${USUARIO}/repos?sort=updated`,
+    {
       // Esto asegura que Next.js actualice los datos cada 1 horas (revalidate)
-      next: { revalidate: 3600 }
-    });
+      next: { revalidate: 3600 },
+    }
+  );
 
   if (!response.ok) throw new Error("No se pudieron cargar los repositorios");
 
@@ -20,7 +21,7 @@ export async function getGithubRepos() {
       const esPublico = !repo.private;
       const noEsFork = !repo.fork;
       const tieneTopicPortfolio = repo.topics?.includes("portfolio"); // <--- FILTRO CLAVE
-      
+
       return esPublico && noEsFork && tieneTopicPortfolio;
     })
     .map((repo: any) => ({
@@ -31,6 +32,6 @@ export async function getGithubRepos() {
       tags: repo.topics || [],
       stars: repo.stargazers_count,
       // CONSTRUCCIÓN DEL LINK DE LA IMAGEN
-      image: `https://raw.githubusercontent.com/${USUARIO}/${repo.name}/${BRANCH}/${NOMBRE_IMAGEN}`
+      image: `https://raw.githubusercontent.com/${USUARIO}/${repo.name}/${BRANCH}/${NOMBRE_IMAGEN}`,
     }));
 }
