@@ -2,8 +2,9 @@
 import ProjectCard from "@/components/proyects/ProjectCard";
 import { projects } from "@/data/projects";
 import { Reveal } from "@/components/reveal/Reveal";
-
-export default function ProyectosPage() {
+import { getGithubRepos } from "@/data/github";
+export default async function ProyectosPage() {
+  const repos = await getGithubRepos();
   return (
     <main className="max-w-5xl mx-auto px-4 pt-32 pb-20">
       <Reveal width="100%">
@@ -17,10 +18,17 @@ export default function ProyectosPage() {
       </Reveal>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project) => (
-          <Reveal key={project.id} width="100%">
-            {/* Aquí podrías crear una tarjeta más grande si quisieras */}
-            <ProjectCard {...project} />
+        
+        {repos.map((repo: any) => (
+          <Reveal key={repo.id} width="100%">
+          <ProjectCard 
+            key={repo.id}
+            title={repo.title}
+            description={repo.description}
+            link={repo.link}
+            tags={repo.tags}
+            image={repo.image}
+          />
           </Reveal>
         ))}
       </div>
