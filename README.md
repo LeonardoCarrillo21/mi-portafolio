@@ -5,7 +5,7 @@
 **🔗 Ver sitio en vivo:** [https://mi-portafolio-henna-mu.vercel.app/](https://mi-portafolio-henna-mu.vercel.app/)
 
 
-![https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/screenshoot.png](https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/screenshoot.png)
+![https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/screenshot.png](https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/screenshot.png)
 
 ---
 
