@@ -4,7 +4,7 @@
 
 **🔗 Ver sitio en vivo:** [https://tu-portafolio.vercel.app](https://tu-portafolio.vercel.app)
 
-[https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png](https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png)
+![https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png](https://github.com/LeonardoCarrillo21/mi-portafolio/blob/main/public/imgs/Portada.png)
 
 ---
 
