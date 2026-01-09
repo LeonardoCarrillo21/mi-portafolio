@@ -2,6 +2,7 @@
 import ProjectCard from "@/components/proyects/ProjectCard";
 import { Reveal } from "@/components/reveal/Reveal";
 import { getGithubRepos } from "@/data/github";
+import Image from 'next/image';
 // import ListaProyectos from "@/_lib/proyectos/listaproyectos";
 
 // export default function ProyectosPage() {
@@ -18,6 +19,10 @@ export default async function ProyectosPage() {
           </p>
           <p className="text-gray-400 text-lg max-w-2xl">
             Puedes revisar los proyectos con detenimiento en Git Hub,
+          </p>
+
+          <p className="text-gray-500 text-lg max-w-2xl py-4 inline-flex items-center gap-2">
+            <Image src="/imgs/robot.svg" alt="GitHub" width={20} height={20} />
             estos proyectos se agregan automaticamente desde mi cuenta de Git Hub.
           </p>
         </header>
