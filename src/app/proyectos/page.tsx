@@ -1,8 +1,10 @@
 // src/app/proyectos/page.tsx
 import ProjectCard from "@/components/proyects/ProjectCard";
-import { projects } from "@/data/projects";
 import { Reveal } from "@/components/reveal/Reveal";
 import { getGithubRepos } from "@/data/github";
+// import ListaProyectos from "@/_lib/proyectos/listaproyectos";
+
+// export default function ProyectosPage() {
 export default async function ProyectosPage() {
   const repos = await getGithubRepos();
   return (
@@ -31,6 +33,7 @@ export default async function ProyectosPage() {
           />
           </Reveal>
         ))}
+        {/* <ListaProyectos onlyDestacados={false} /> */}
       </div>
     </main>
   );

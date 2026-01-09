@@ -1,10 +1,22 @@
 // src/app/page.tsx
-import ProjectCard from "@/components/proyects/ProjectCard";
-import { projects } from "@/data/projects";
-import Skills from "@/components/skills/Skills"; // Importar
+"use client";
+// import ProjectCard from "@/components/proyects/ProjectCard";
+import Skills from "@/components/skills/Skills"; // Importar el componente Skills
 import { Reveal } from "@/components/reveal/Reveal"; // Importamos el componente
 
-export default function Home() {
+import Link from 'next/link';
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+
+export default  function Home() {
+const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return (
     <main className="max-w-5xl mx-auto px-4 pt-32 pb-20">
       {/* Sección Hero (ya la tienes) */}
@@ -18,18 +30,19 @@ export default function Home() {
           minimalistas y eficientes. Especializado en React, Next.js y Node.
         </p>
         <div className="mt-10 flex gap-4">
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+          <Link href="/proyectos" className={`${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-gray-100 text-black'} px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition`}>
             Ver Proyectos
-          </button>
-          <button className="border border-white/20 px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">
+          </Link>
+          <Link href="/contacto" className={`${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-gray-100 text-black'} px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition`}>
             Contacto
-          </button>
+          </Link>
         </div>
       </section>
       </Reveal>
 
 
       {/* SECCIÓN DE PROYECTOS */}
+      {/* {repos && repos.length > 0 && (
       <section id="proyectos" className="py-20">
 
         <Reveal width="100%">
@@ -39,19 +52,20 @@ export default function Home() {
         </div>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <Reveal width="100%" key={project.id}>
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                tags={project.tags}
-                link={project.link}
-              />
+          {repos.map((repo: any) => (
+            <Reveal key={repo.id} width="100%">
+            <ProjectCard 
+              key={repo.id}
+              title={repo.title}
+              description={repo.description}
+              link={repo.link}
+              tags={repo.tags}
+              image={repo.image}
+            />
             </Reveal>
           ))}
         </div>
-      </section>
+      </section> )} */}
 
       {/* SECCIÓN DE SKILLS */}
       <Reveal width="100%">

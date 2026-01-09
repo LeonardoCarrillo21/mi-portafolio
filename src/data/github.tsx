@@ -1,4 +1,4 @@
-export async function getGithubRepos() {
+export async function getGithubRepos(onlyDestacados: boolean = false) {
   const USUARIO = "LeonardoCarrillo21";
   const BRANCH = "main"; // o "master", según uses
   const NOMBRE_IMAGEN = "screenshot.png"; // La convención que elijas
@@ -21,7 +21,8 @@ export async function getGithubRepos() {
       const esPublico = !repo.private;
       const noEsFork = !repo.fork;
       const tieneTopicPortfolio = repo.topics?.includes("portfolio"); // <--- FILTRO CLAVE
-
+      const tieneTopicDestacado = repo.topics?.includes("destacado"); // <--- FILTRO CLAVE
+      if(onlyDestacados) return esPublico && noEsFork && tieneTopicPortfolio && tieneTopicDestacado;
       return esPublico && noEsFork && tieneTopicPortfolio;
     })
     .map((repo: any) => ({

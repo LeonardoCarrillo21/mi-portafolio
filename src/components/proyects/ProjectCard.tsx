@@ -28,7 +28,7 @@ export default function ProjectCard({ title, description, tags, link, image }: P
   return (
     <div className={`group relative rounded-2xl border border-white/10 ${theme === "dark" ? "bg-white/5" : "bg-gray-100"} p-6 transition-all hover:bg-white/10 hover:border-blue-500/50`}>
 
-      {/* <Image 
+      {/* <Image //necesita next.config.js para imagenes externas
         src={imgSrc} 
         alt={title} 
         width={300} 
