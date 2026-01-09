@@ -16,6 +16,10 @@ export default async function ProyectosPage() {
             Una colección de trabajos donde he aplicado mis conocimientos en 
             desarrollo web, desde aplicaciones full-stack hasta experimentos creativos.
           </p>
+          <p className="text-gray-400 text-lg max-w-2xl">
+            Puedes revisar los proyectos con detenimiento en Git Hub,
+            estos proyectos se agregan automaticamente desde mi cuenta de Git Hub.
+          </p>
         </header>
       </Reveal>
 
