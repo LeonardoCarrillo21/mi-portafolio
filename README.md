@@ -58,7 +58,7 @@ Si deseas clonar este proyecto y ejecutarlo en tu máquina:
 
 Estructura del Proyecto
 Plaintext
-
+```text
 ├── public/          # Imágenes y archivos estáticos
 ├── src/
 │   ├── app/         # Rutas, páginas y Server Actions
@@ -66,6 +66,8 @@ Plaintext
 │   ├── data/        # Lógica de extracción de datos de GitHub
 │   └── lib/         # Utilidades y configuración de APIs
 └── tailwind.config/ # Configuración de estilos
+```
+
 ✉️ Contacto
 ¿Tienes alguna pregunta o propuesta? ¡Escríbeme!
 
