@@ -47,7 +47,7 @@ Si deseas clonar este proyecto y ejecutarlo en tu máquina:
    cd mi-portafolio
 2. **Instalar dependencias:**
    ```bash
-   npm install
+   pnpm install
    ```
 3. **Configurar variables de entorno:**
    Crea un archivo .env.local en la raíz y añade tu llave de Resend:
