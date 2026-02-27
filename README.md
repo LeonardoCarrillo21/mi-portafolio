@@ -48,12 +48,14 @@ Si deseas clonar este proyecto y ejecutarlo en tu máquina:
 2. **Instalar dependencias:**
    ```bash
    npm install
+   ```
 3. **Configurar variables de entorno:**
    Crea un archivo .env.local en la raíz y añade tu llave de Resend:
    RESEND_API_KEY=re_tu_llave_aqui
 4. **Ejecutar el servidor de desarrollo:**
-   npm run dev
-
+   ```bash
+   pnpm run dev
+   ```
    Abre http://localhost:3000 en tu navegador.
 
 Estructura del Proyecto
