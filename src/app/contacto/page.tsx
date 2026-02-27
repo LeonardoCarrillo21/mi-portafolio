@@ -8,10 +8,7 @@ import { Linkedin } from "lucide-react";
 import { useState,useEffect } from "react";
 import { sendEmail } from "@/app/actions"; // Importamos la acción que creamos
 
-import { useTheme } from "next-themes";
-
 export default function ContactoPage() {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -72,7 +69,7 @@ export default function ContactoPage() {
           </div>
 
           {/* Columna Derecha: Formulario */}
-          <div className={`${theme === "dark" ? "bg-gray-900/70" : "bg-gray-100/70"} p-8 rounded-2xl border border-white/10`}>
+          <div className={`dark:bg-gray-900/70 bg-gray-100/70 p-8 rounded-2xl border border-white/10`}>
             {status === "success" ? (
               <div className="text-center py-10">
                 <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -94,7 +91,7 @@ export default function ContactoPage() {
                     name="name"
                     type="text" 
                     required
-                    className= {`w-full ${theme === "dark" ? "bg-gray-800/40" : "bg-white/90"} border border-white/10 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-all`}
+                    className= {`w-full  dark:bg-gray-800/40 bg-white/90 border border-white/10 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-all`}
                   />
                 </div>
                 <div>
@@ -104,7 +101,7 @@ export default function ContactoPage() {
                     name="email"
                     type="email" 
                     required
-                    className= {`w-full ${theme === "dark" ? "bg-gray-800/40" : "bg-white/90"} border border-white/10 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-all`}
+                    className= {`w-full  dark:bg-gray-800/40 bg-white/90 border border-white/10 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-all`}
                   />
                 </div>
                 <div>
@@ -114,7 +111,7 @@ export default function ContactoPage() {
                     name="message"
                     required
                     rows={4}
-                    className= {`w-full ${theme === "dark" ? "bg-gray-800/40" : "bg-white/90"} border border-white/10 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-all`}
+                    className= {`w-full  dark:bg-gray-800/40 bg-white/90 border border-white/10 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-all`}
                   ></textarea>
                 </div>
                 

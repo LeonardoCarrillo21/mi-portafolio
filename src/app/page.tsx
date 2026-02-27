@@ -6,10 +6,9 @@ import { Reveal } from "@/components/reveal/Reveal"; // Importamos el componente
 
 import Link from 'next/link';
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+
 
 export default  function Home() {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -30,10 +29,10 @@ export default  function Home() {
           minimalistas y eficientes. Especializado en React, Next.js y Node.
         </p>
         <div className="mt-10 flex gap-4">
-          <Link href="/proyectos" className={`${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-gray-200 text-black hover:bg-gray-100'} px-6 py-3 rounded-full font-semibold border border-gray-300 transition`}>
+          <Link href="/proyectos" className={`dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 bg-gray-200 text-black hover:bg-gray-100 px-6 py-3 rounded-full font-semibold border border-gray-300 transition`}>
             Ver Proyectos
           </Link>
-          <Link href="/contacto" className={`${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-gray-200 text-black hover:bg-gray-100'} px-6 py-3 rounded-full font-semibold border border-gray-300 transition`}>
+          <Link href="/contacto" className={`dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 bg-gray-200 text-black hover:bg-gray-100 px-6 py-3 rounded-full font-semibold border border-gray-300 transition`}>
             Contacto
           </Link>
         </div>

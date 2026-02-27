@@ -2,12 +2,9 @@
 import { Reveal } from "@/components/reveal/Reveal";
 import { User, GraduationCap, Code, Coffee } from "lucide-react";
 import Image from 'next/image';
-
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export default function AboutPage() {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -23,7 +20,7 @@ export default function AboutPage() {
         {/* Lado Izquierdo: Tu Foto o Ilustración */}
         <div className="md:col-span-5">
           <Reveal>
-            <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-1">
+            <div className="relative aspect-square rounded-2xl bg-linear-to-br from-blue-500 to-purple-600 p-1">
               <div className="w-full h-full bg-black rounded-2xl flex items-center justify-center overflow-hidden">
                 {/* Aquí puedes poner tu foto con <Image /> de Next.js */}
                 <Image src="/imgs/MiFoto.jpeg" alt="Leonardo Carrillo" width={300} height={300} />
@@ -37,7 +34,7 @@ export default function AboutPage() {
         <div className="md:col-span-7">
           <Reveal>
             <h1 className="text-5xl font-bold mb-6">Un poco sobre mí.</h1>
-            <div className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'} space-y-4 text-lg leading-relaxed`}>
+            <div className={`dark:text-gray-300 text-gray-600 space-y-4 text-lg leading-relaxed`}>
               <p>
                 Soy un desarrollador apasionado por crear soluciones digitales que combinen
                 funcionalidad con una experiencia de usuario excepcional.
@@ -54,7 +51,7 @@ export default function AboutPage() {
       {/* SECCIÓN DE DATOS EXTRA (Bento Grid Style) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
         <Reveal>
-          <div className={`${theme === 'dark' ? 'text-gray-300 bg-white/5 border-white/10' : 'text-gray-950 bg-white/30 border-gray-300'} p-6 rounded-2xl  border  h-full`}>
+          <div className={`dark:text-gray-300 dark:bg-white/5 dark:border-white/10 text-gray-950 bg-white/30 border-gray-300 p-6 rounded-2xl  border  h-full`}>
             <GraduationCap className="text-blue-400 mb-4" size={32} />
             <h3 className="text-xl font-bold mb-2">Educación</h3>
             <p className="text-gray-400 text-sm">Ingeniería en Computación / Autodidacta enfocado en desarrollo web moderno.</p>
@@ -66,7 +63,7 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal>
-          <div className={`${theme === 'dark' ? 'text-gray-300 bg-white/5 border-white/10' : 'text-gray-950 bg-white/30 border-gray-300'} p-6 rounded-2xl  border  h-full`}>
+          <div className={`dark:text-gray-300 dark:bg-white/5 dark:border-white/10 text-gray-950 bg-white/30 border-gray-300 p-6 rounded-2xl  border  h-full`}>
             <Code className="text-purple-400 mb-4" size={32} />
             <h3 className="text-xl font-bold mb-2">Filosofía</h3>
             <p className="text-gray-400 text-sm">Código limpio, escalable y siempre priorizando la accesibilidad para todos.</p>
@@ -74,7 +71,7 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal>
-          <div className={`${theme === 'dark' ? 'text-gray-300 bg-white/5 border-white/10' : 'text-gray-950 bg-white/30 border-gray-300'} p-6 rounded-2xl  border  h-full`}>
+          <div className={`dark:text-gray-300 dark:bg-white/5 dark:border-white/10 text-gray-950 bg-white/30 border-gray-300 p-6 rounded-2xl  border  h-full`}>
             <Coffee className="text-orange-400 mb-4" size={32} />
             <h3 className="text-xl font-bold mb-2">Intereses</h3>
             <p className="text-gray-400 text-sm">Entusiasta del café de especialidad, los videojuegos indie y el open source.</p>
