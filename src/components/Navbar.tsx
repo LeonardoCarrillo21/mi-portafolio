@@ -60,7 +60,7 @@ export default function Navbar() {
             aria-label="Cambiar tema"
           >
             {mounted ? (
-              resolvedTheme === "dark" ? <Moon size={22} className="text-gray-400" /> : <Sun size={22} className="text-amber-100" />
+              resolvedTheme === "dark" ? <Moon size={22} className="text-gray-400 fill-black" /> : <Moon size={22} className="text-gray-700" />
             ) : (
               <div className="w-22 h-22" /> // Un espacio vacío del mismo tamaño mientras carga
             )}
