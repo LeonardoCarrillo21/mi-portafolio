@@ -8,12 +8,10 @@ interface ProjectProps {
   image: string;
 }
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 // import Image from 'next/image';
 
 export default function ProjectCard({ title, description, tags, link, image }: ProjectProps) {
   console.log(image);
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   const [imgSrc, setImgSrc] = useState(image);
@@ -26,7 +24,7 @@ export default function ProjectCard({ title, description, tags, link, image }: P
   if (!mounted) return null;
 
   return (
-    <div className={`group relative rounded-2xl border border-white/10 ${theme === "dark" ? "bg-white/5" : "bg-gray-100"} p-6 transition-all hover:bg-white/10 hover:border-blue-500/50`}>
+    <div className={`group relative rounded-2xl border border-white/10 dark:bg-white/5 bg-gray-100 p-6 transition-all hover:bg-white/10 hover:border-blue-500/50`}>
 
       {/* <Image //necesita next.config.js para imagenes externas
         src={imgSrc} 
@@ -62,7 +60,7 @@ export default function ProjectCard({ title, description, tags, link, image }: P
       <a 
         href={link} 
         target="_blank" 
-        className={`text-sm font-semibold inline-flex items-center gap-1 ${theme === "dark" ? "text-white " : "text-black "} hover:underline`}
+        className={`text-sm font-semibold inline-flex items-center gap-1 dark:text-white text-black hover:underline`}
       >
         Ver proyecto 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
