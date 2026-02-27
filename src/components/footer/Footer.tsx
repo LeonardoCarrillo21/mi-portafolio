@@ -1,9 +1,18 @@
 "use client";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   return (
     <footer id="contacto" className="border-t border-white/10 bg-black py-12 mt-20">
       <div className="max-w-5xl mx-auto px-4">
@@ -11,7 +20,7 @@ export default function Footer() {
           
           {/* Lado Izquierdo: Texto */}
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold mb-2">¿Tienes un proyecto en mente?</h2>
+            <h2 className="text-white text-2xl font-bold mb-2">¿Tienes un proyecto en mente?</h2>
             <p className="text-gray-400 max-w-sm">
               Estoy disponible para nuevas oportunidades y colaboraciones. 
               ¡Hablemos de cómo puedo ayudarte!

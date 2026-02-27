@@ -19,10 +19,10 @@ export default function Skills() {
               {category.skills.map((skill) => (
                 <div 
                   key={skill.name}
-                  className="flex items-center gap-3 p-4 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 transition-colors group"
+                  className="flex  items-center gap-3 p-4 rounded-xl border border-white/5 dark:bg-white/5 bg-white/40 hover:bg-gray-300/50 dark:hover:bg-white/10 transition-colors group"
                 >
                   <skill.icon className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                  <span className="text-gray-300 font-medium">{skill.name}</span>
+                  <span className="dark:text-white text-gray-600 font-medium">{skill.name}</span>
                 </div>
               ))}
             </div>

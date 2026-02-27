@@ -52,7 +52,7 @@ export default function Navbar() {
           <Link href="/sobre-mi" className={`hover:${theme === "dark" ? "text-white" : "text-black"} transition-colors hover:underline`}>Sobre mí</Link>
           <Link href="/contacto" className={`hover:${theme === "dark" ? "text-white" : "text-black"} transition-colors hover:underline`}>Contacto</Link>
         </div>
-        {/* BOTÓN DEL OJO */}
+        {/* BOTÓN DEL sol */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-all text-gray-800 dark:text-white"
